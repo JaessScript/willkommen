@@ -35,7 +35,7 @@ nav {
     display: grid;
     grid-template-areas:
         "margin-left centre margin-right";
-    grid-template-columns: 50px 1fr 50px;
+    grid-template-columns: 30px 1fr 30px;
     justify-items: center;
     align-items: center;
 }
@@ -47,7 +47,7 @@ nav {
     grid-gap: 70px;
     grid-template-areas:
         "left info right";
-    grid-template-columns: 50px 1fr 50px;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
     justify-items: center;
     align-items: center;
 }
