@@ -35,7 +35,7 @@ nav {
     display: grid;
     grid-template-areas:
         "margin-left centre margin-right";
-    grid-template-columns: 30px 1fr 30px;
+    grid-template-columns: 1fr auto 1fr;
     justify-items: center;
     align-items: center;
 }
