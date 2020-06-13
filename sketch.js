@@ -1,7 +1,16 @@
+let canvas;
+
+// Resive the canvas when the size of the browser changes
+function windowResized() {
+	resizeCanvas(windowWidth, windowHeight);
+}
+
 function setup() {
-	createCanvas(windowWidth, windowHeight);
+	canvas = createCanvas(windowWidth, windowHeight);
+	canvas.position(0, 0);
+	canvas.style('z-index', '-1');
 }
 
 function draw() {
-	
+	background(255, 132, 100);
 }
