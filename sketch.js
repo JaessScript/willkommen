@@ -5,6 +5,14 @@ let germany;
 let x_ge;
 let y_ge;
 
+let merkel;
+let x_me;
+let y_me;
+
+let currywurst;
+let x_cu;
+let y_cu;
+
 // Resive the canvas when the size of the browser changes
 function windowResized() {
 	resizeCanvas(windowWidth, windowHeight);
@@ -26,6 +34,15 @@ function setup() {
 	y_ge = 0;
 	setInterval(changePositionGermany, 300);
 
+	merkel = select('#merkel');
+	x_me = windowWidth / 2;
+	y_me = windowHeight;
+	setInterval(changePositionMerkel, 200);
+
+	currywurst = select('#currywurst');
+	x_cu = (2 * windowWidth) / 3;
+	y_cu = 0;
+	setInterval(changePositionCurrywurst, 300);
 }
 
 function changeColor() {
@@ -36,10 +53,28 @@ function changeColor() {
 
 function changePositionGermany() {
 	germany.position(x_ge, y_ge);
-	if(y_ge<windowHeight){
+	if (y_ge < windowHeight) {
 		y_ge += 10;
 	} else {
 		y_ge = 0;
+	}
+}
+
+function changePositionMerkel() {
+	merkel.position(x_me, y_me);
+	if (y_me => windowHeight) {
+		y_me -= 10;
+	} else {
+		y_me = windowHeight;
+	}
+}
+
+function changePositionCurrywurst() {
+	currywurst.position(x_cu, y_cu);
+	if (y_cu < windowHeight) {
+		y_cu += 10;
+	} else {
+		y_cu = 0;
 	}
 }
 
