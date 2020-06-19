@@ -1,5 +1,6 @@
 let canvas;
 let next;
+let copyrights;
 
 let germany;
 let x_ge;
@@ -28,6 +29,9 @@ function setup() {
 	next.position(windowWidth / 2, 5);
 	next.style('font-size', '1.5em');
 	setInterval(changeColor, 500);
+
+	copyrights = select('#copyrights');
+	copyrights.position(100 + windowWidth / 3, windowHeight-50);
 
 	germany = select('#germany');
 	x_ge = windowWidth / 3;
@@ -62,9 +66,10 @@ function changePositionGermany() {
 
 function changePositionMerkel() {
 	merkel.position(x_me, y_me);
-	if (y_me => windowHeight) {
+	if (y_me <= windowHeight) {
 		y_me -= 10;
-	} else {
+	}
+	if (y_me < 0) {
 		y_me = windowHeight;
 	}
 }
