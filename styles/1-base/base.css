@@ -14,7 +14,14 @@ html {
   }
 
   body {
-    font-family: courier;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   
   h1,
@@ -26,8 +33,7 @@ html {
     font-weight: bold;
     margin: 0;
     font-size: 2em;
+    font-family: 'Courier New', Courier, monospace;
   }
   
-  img {
-    /* width:100%; */
-  }
+  

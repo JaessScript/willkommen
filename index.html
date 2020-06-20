@@ -28,7 +28,6 @@
 	<meta name="msapplication-TileColor" content="#ffffff">
 	<meta name="msapplication-TileImage" content="./img/ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
-	<link rel="stylesheet" href="styles/main.css">
 
 	<script src="libraries/p5.js"></script>
 	<script src="libraries/p5.dom.js"></script>
@@ -39,11 +38,46 @@
 		body {
 			margin: 0;
 			padding: 0;
-			overflow: hidden;
+			overflow: auto;
+			background-color: rgb(255, 132, 100);
+
+			font-family: 'Courier New', Courier, monospace;
 		}
 
-		canvas {
+		/*canvas {
 			margin: auto;
+		} */
+
+		.wrapper {
+			display: grid;
+			grid-template-rows: auto 1fr auto;
+			grid-template-areas:
+				"header"
+				"main"
+				"footer";
+			height: 100vw;
+			justify-content: center;
+		}
+
+		.header {
+			grid-area: header;
+			text-align: center;
+			background-color: rgb(255, 132, 100);
+			height: 10vh;
+			width: 100%;
+		}
+
+		.main {
+			grid-area: main;
+			align-self: center;
+			text-align: center;
+			background-color: rgb(255, 132, 100);
+		}
+
+		.footer {
+			grid-area: footer;
+			text-align: center;
+			background-color: rgb(255, 132, 100);
 		}
 	</style>
 </head>
@@ -51,43 +85,21 @@
 <!-- BODY - The Page, displayed -->
 
 <body>
-	<!-- Header -->
-	<header>
-		<a id="next" href="https://jaessscript.github.io/germany/" title="Link to next page">Next-></a>
-	</header>
 
 	<div class="wrapper">
-
-		<!-- Middle -->
-		<section class="middle">
-			<section class="ecran">
-				<p></p>
-				<h1>Willkommen in Berlin!</h1>
-				<p></p>
-			</section>
-		</section>
-
-			<!-- Footer -->
-			<footer>
-				<a id="copyrights" href="https://jaessscript.github.io/mine/" title="Link to Copyrights pages">&copy; 2020 Copyrights!</p>
-				<!-- <div class="footer-socialmedia">
-					<div class="footer-socialmedia-links">
-						<a href="https://www.instagram.com/jaeaess/" title="Link to Jääß Facebook page" target="_blank">Facebook</a>
-						<a href="https://www.instagram.com/jaeaess/" title="Link to Jääß Instagram page" target="_blank">Instagram</a>
-						<a href="https://www.instagram.com/jaeaess/" title="Link to Jääß Vimeo page" target="_blank">Vimeo</a>
-						<a href="https://www.instagram.com/jaeaess/" title="Link to Jääß Behance page" target="_blank">Behance</a>
-					 </div>
-					<p class= "footer-copyright">&copy; 2019 Jääß</p>
-				</div>
-				<div class="footer-impressum">
-					<a href="./impressum.html" title="Impressum">Impressum</a>
-				</div> -->
-			</footer>
-
+		<header class="header"><a id="next" href="https://jaessscript.github.io/germany/"
+				title="Link to next page">Next-></a></header>
+		<article class="main">
+			<h1>Willkommen in Berlin!</h1>
+		</article>
+		<footer class="footer"><a id="copyrights" href="https://jaessscript.github.io/mine/"
+				title="Link to Copyrights pages">&copy; 2020
+				Copyrights!</p></a></footer>
 	</div>
-	<img id= "germany" src="assets/ge_map.png" alt="Map of Germany" width="100" height="100">  
-	<img id= "merkel" src="assets/merkel.png" alt="Angela Merkel" width="100" height="100"> 
-	<img id= "currywurst" src="assets/currywurst.png" alt="Currywurst" width="100" height="100"> 
+
+	<img id="germany" src="assets/ge_map.png" alt="Map of Germany" width="100" height="100">
+	<img id="merkel" src="assets/merkel.png" alt="Angela Merkel" width="100" height="100">
+	<img id="currywurst" src="assets/currywurst.png" alt="Currywurst" width="100" height="100">
 </body>
 
 </html>
