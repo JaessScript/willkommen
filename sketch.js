@@ -31,7 +31,7 @@ function setup() {
 	setInterval(changeColor, 500);
 
 	copyrights = select('#copyrights');
-	copyrights.position(100 + windowWidth / 3, windowHeight-50);
+	// copyrights.position(100 + windowWidth / 3, windowHeight-50);
 
 	germany = select('#germany');
 	x_ge = windowWidth / 3;
