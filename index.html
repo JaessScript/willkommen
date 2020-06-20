@@ -36,6 +36,8 @@
 
 	<style>
 		body {
+			width: 100vw;
+			height: 100vh;
 			margin: 0;
 			padding: 0;
 			overflow: auto;
@@ -44,9 +46,9 @@
 			font-family: 'Courier New', Courier, monospace;
 		}
 
-		/*canvas {
+		canvas {
 			margin: auto;
-		} */
+		}
 
 		.wrapper {
 			display: grid;
@@ -55,7 +57,9 @@
 				"header"
 				"main"
 				"footer";
+			grid-row: -1/1;
 			height: 100vw;
+			width: 100vw;
 			justify-content: center;
 		}
 
@@ -91,15 +95,14 @@
 				title="Link to next page">Next-></a></header>
 		<article class="main">
 			<h1>Willkommen in Berlin!</h1>
+			<img id="germany" src="assets/ge_map.png" alt="Map of Germany" width="100" height="100">
+			<img id="merkel" src="assets/merkel.png" alt="Angela Merkel" width="100" height="100">
+			<img id="currywurst" src="assets/currywurst.png" alt="Currywurst" width="100" height="100">
 		</article>
 		<footer class="footer"><a id="copyrights" href="https://jaessscript.github.io/mine/"
 				title="Link to Copyrights pages">&copy; 2020
 				Copyrights!</p></a></footer>
 	</div>
-
-	<img id="germany" src="assets/ge_map.png" alt="Map of Germany" width="100" height="100">
-	<img id="merkel" src="assets/merkel.png" alt="Angela Merkel" width="100" height="100">
-	<img id="currywurst" src="assets/currywurst.png" alt="Currywurst" width="100" height="100">
 </body>
 
 </html>
